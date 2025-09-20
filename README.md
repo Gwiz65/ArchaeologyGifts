@@ -12,6 +12,6 @@ A Wurm Unlimited mod that adds special game item fragments to archaeology caches
   - Includes bug fix for buggy vanilla code dealing with alloy and moonmetal creation chances.
   - Includes bug fix to prevent uncombinable completely identified "metal" lump fragments.
 
-- **WARNING**
+- **NOTICE**
   - All of the item templates listed in giftList will have isDrop set to false while this mod is running to prevent undroppable fragments getting stuck in player inventory. 
     
