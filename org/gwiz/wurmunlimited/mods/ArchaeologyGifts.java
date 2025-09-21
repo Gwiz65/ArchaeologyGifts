@@ -62,7 +62,7 @@ public class ArchaeologyGifts
 	private static boolean applyArchBugfixes = true;
 	private static boolean addGiftsToArchCache = true;
 	private static int giftFragAmount = 10;
-	List<Integer> giftArrayList = new ArrayList<>();
+	private static List<Integer> giftArrayList = new ArrayList<>();
 
 	@Override
 	public void configure(Properties properties) {
