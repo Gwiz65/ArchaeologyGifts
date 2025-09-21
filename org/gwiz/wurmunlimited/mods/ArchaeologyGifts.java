@@ -57,7 +57,7 @@ import javassist.expr.MethodCall;
 public class ArchaeologyGifts
 		implements WurmServerMod, Configurable, PreInitable, Versioned, ItemTemplatesCreatedListener {
 
-	private static final String version = "0.22";
+	private static final String version = "beta.01";
 	private static Logger logger = Logger.getLogger(ArchaeologyGifts.class.getName());
 	private static boolean applyArchBugfixes = true;
 	private static boolean addGiftsToArchCache = true;
