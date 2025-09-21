@@ -1,5 +1,5 @@
 # ArchaeologyGifts
-A Wurm Unlimited mod that adds special game item fragments to archaeology caches
+A Wurm Unlimited server mod that adds special game item fragments to archaeology caches
 
 - **Installation**
   - needs Ago's Server Modlauncher installed
