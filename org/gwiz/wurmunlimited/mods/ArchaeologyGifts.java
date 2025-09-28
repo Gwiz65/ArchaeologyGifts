@@ -84,7 +84,7 @@ public class ArchaeologyGifts
 		}
 		if (giftArrayList.isEmpty()) {
 			addGiftsToArchCache = false;
-			logger.log(Level.SEVERE, "Unable to parse gift list from properties file. Disabling archeology gifts.");
+			logger.log(Level.SEVERE, "Unable to parse gift list from properties file. Disabling archaeology gifts.");
 		} else {
 			logger.log(Level.INFO, giftArrayList.size() + " gift items parsed from properties file.");
 		}
@@ -121,9 +121,9 @@ public class ArchaeologyGifts
 						}
 					}
 				});
-				logger.log(Level.INFO, "Archeology bug fixes applied.");
+				logger.log(Level.INFO, "Archaeology bug fixes applied.");
 			} catch (CannotCompileException | NotFoundException e) {
-				logger.log(Level.SEVERE, "Something went horribly wrong applying archeology bug fixes!", e);
+				logger.log(Level.SEVERE, "Something went horribly wrong applying archaeology bug fixes!", e);
 			}
 		}
 
@@ -139,10 +139,10 @@ public class ArchaeologyGifts
 				if (staticInitializer != null) {
 					staticInitializer.insertAfter(textToInsert.toString());
 					logger.log(Level.INFO,
-							giftArrayList.size() + " gift fragments added to archeology cache loot tables.");
+							giftArrayList.size() + " gift fragments added to archaeology cache loot tables.");
 				}
 			} catch (NotFoundException | CannotCompileException e) {
-				logger.log(Level.SEVERE, "Something went horribly wrong updating archeology cache loot tables!", e);
+				logger.log(Level.SEVERE, "Something went horribly wrong updating archaeology cache loot tables!", e);
 			}
 		}
 	}
