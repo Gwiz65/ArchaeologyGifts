@@ -57,7 +57,7 @@ import javassist.expr.MethodCall;
 public class ArchaeologyGifts
 		implements WurmServerMod, Configurable, PreInitable, Versioned, ItemTemplatesCreatedListener {
 
-	private static final String version = "beta.01";
+	private static final String version = "beta.02";
 	private static Logger logger = Logger.getLogger(ArchaeologyGifts.class.getName());
 	private static boolean applyArchBugfixes = true;
 	private static boolean addGiftsToArchCache = true;
@@ -156,11 +156,11 @@ public class ArchaeologyGifts
 					ItemTemplate template = ItemTemplateFactory.getInstance().getTemplate(id);
 					ReflectionUtil.setPrivateField(template, ReflectionUtil.getField(ItemTemplate.class, "nodrop"),
 							false);
-					template.setFragmentAmount(giftFragAmount);
+					template.setFragmentAmount(Math.max(giftFragAmount, template.getFragmentAmount()));
 				}
 				logger.log(Level.INFO, "Updated " + giftArrayList.size() + " archaeology cache gift item templates.");
-				logger.log(Level.INFO,
-						"Gift items are now droppable and require " + giftFragAmount + " fragments to complete.");
+				logger.log(Level.INFO, "Gift items are now droppable and require at least " + giftFragAmount
+						+ " fragments to complete.");
 			} catch (IllegalArgumentException | ClassCastException | IllegalAccessException | NoSuchFieldException
 					| NoSuchTemplateException e) {
 				logger.log(Level.SEVERE, "Something went horribly wrong updating gift item templates!", e);
